@@ -5,13 +5,21 @@
 For the **first** task, the challenge was to create a **directory tree** within my computer's operating system like the one shown below:
 
 ├── draft_code
+
    ├── pending
+   
    └── complete
+   
 ├── includes
+
 ├── layouts
+
    ├── default
+   
    └── post
+   
        └── posted
+       
 └── site
 
 We had to create this directory tree using os.system or os.mkdirs and then delete the tree from our operating system.
