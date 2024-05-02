@@ -4,23 +4,8 @@
 
 For the **first** task, the challenge was to create a **directory tree** within my computer's operating system like the one shown below:
 
-├── draft_code
+<img width="257" alt="image" src="https://github.com/mderderian15/NRS_528_Python/assets/157772065/edce0d92-107e-454b-9d36-3edd982421d4">
 
-   ├── pending
-   
-   └── complete
-   
-├── includes
-
-├── layouts
-
-   ├── default
-   
-   └── post
-   
-       └── posted
-       
-└── site
 
 We had to create this directory tree using os.system or os.mkdirs and then delete the tree from our operating system.
 
