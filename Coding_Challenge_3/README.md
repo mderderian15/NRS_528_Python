@@ -1,6 +1,6 @@
-### Coding Challenge 3
+# Coding Challenge 3
 ## Modules
-# This coding challenge includes three separate tasks called *Simple directory tree*, *Push sys.argv to the limit*, and *Working with CSV*.
+### This coding challenge includes three separate tasks called *Simple directory tree*, *Push sys.argv to the limit*, and *Working with CSV*.
 
 For the **first** task, the challenge was to create a **directory tree** within my computer's operating system like the one shown below:
 
