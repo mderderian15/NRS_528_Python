@@ -4,6 +4,7 @@
 import arcpy
 import os
 
+# Create base path
 base_path = r'C:\NRS 528'
 
 # name features that are required to run erase analysis in ArcGIS Pro
