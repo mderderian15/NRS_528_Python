@@ -9,6 +9,7 @@ input_string = 'hi dee hi how are you mr dee'
 # split the string into word lists
 w = input_string.split()
 
+# Create loop to count occurrence of each word in the word lists
 for word in w:
     count = w.count(word)
     print(word + " " + "appears" + " " + str(count) + " " + "time(s)")
