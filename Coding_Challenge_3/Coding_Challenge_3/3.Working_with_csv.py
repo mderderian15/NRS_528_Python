@@ -12,7 +12,7 @@
 # import csv file
 import csv
 
-# Annual average for each year in the dataset.
+# Create lists for annual average for each year in the dataset.
 date_list, value_list = [], []
 
 # Establish date list
@@ -25,9 +25,11 @@ with open("co2_ppm_daily.csv") as co2_csv:
 
 print(date_list)
 
+# Create dictionary for average CO2
 average_co2_per_year_dict = {}
 
-for year in date_list:
+# Open CSV file 
+for year in date_list: # For every year in the date list
     with open("co2_ppm_daily.csv") as co2_csv:
 
         average_co2_per_year = []
@@ -50,6 +52,7 @@ with open("co2_ppm_daily.csv") as co2_csv:
     for row in csv.reader(co2_csv):
         dataset_values.append(float(row[1]))
 
+# Find minimum, maximum, and averages of the dataset
 dataset_min = min(dataset_values)
 dataset_max = max(dataset_values)
 dataset_mean = sum(dataset_values) / len(dataset_values)
@@ -63,6 +66,7 @@ print("Mean: " + str(dataset_mean))
 
 # extract month: month = row[0].split('-')[1]
 
+# Create empty seasonal lists
 spring_list = []
 summer_list = []
 autumn_list = []
@@ -71,26 +75,28 @@ winter_list = []
 with open("co2_ppm_daily.csv") as co2_csv:
     next(co2_csv)
     for row in csv.reader(co2_csv):
-        month = row[0].split('-')[1]
+        month = row[0].split('-')[1] # Split the date by the hyphens in the CSV file...The month is the second number split by the hyphens
 
-        if month in ['03', '04', '05']:
+        if month in ['03', '04', '05']: # If date contains 03 04 or 05 for month append it to the spring list
             spring_list.append(float(row[1]))
 
-        if month in ['06', '07', '08']:
+        if month in ['06', '07', '08']: # If date contains 06 07 or 08 for month append it to the summer list
             summer_list.append(float(row[1]))
 
-        if month in ['09', '10', '11']:
+        if month in ['09', '10', '11']: # If date contains 09 10 or 11 for months append it to the fall list
             autumn_list.append(float(row[1]))
 
-        if month in ['12', '01', '02']:
+        if month in ['12', '01', '02']: # If date contains 12 01 or 02 for month append it to the winter list
             winter_list.append(float(row[1]))
 
 
+# Calclulate averages for each season
 spring_average = sum(spring_list) / len(spring_list)
 summer_average = sum(summer_list) / len(summer_list)
 autumn_average = sum(autumn_list) / len(autumn_list)
 winter_average = sum(winter_list) / len(winter_list)
 #
+# Print averages for each season
 print(spring_average)
 print(summer_average)
 print(autumn_average)
